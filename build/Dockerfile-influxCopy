@@ -5,7 +5,7 @@ WORKDIR $GOPATH/src/
 COPY ./cmd/influxMigration/influxCopy ./
 RUN go install
 
-FROM gcr.io/distroless/base
+FROM gcr.io/distroless/base@sha256:41064ae90bc4c4a5f40003f46aa3947c85aba1589a755f73060de4e792c261f4
 
 COPY --from=build /go/bin/influxCopy /bin/influxCopy
 
