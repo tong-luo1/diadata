@@ -1,4 +1,4 @@
-FROM golang:1.14 as build
+FROM s390x/golang:1.14 as build
 
 WORKDIR $GOPATH/src/
 ENV GO111MODULE="on"
